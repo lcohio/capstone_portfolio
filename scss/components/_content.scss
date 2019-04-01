@@ -312,6 +312,7 @@ footer {
     background-size: cover;
     height: 500px;
     text-align: center;
+    margin-top: 4em;
     @media screen and (min-width: 800px) {
         background-attachment: fixed;
     }
@@ -319,7 +320,6 @@ footer {
 
 .contact {
     text-align: center;
-    margin-top: 4em;
 
     &__headline {
         @extend %headline-style;
@@ -331,6 +331,7 @@ footer {
 
     &__phone {
         color: $font-default;
+        
     }
 
     &__email {
@@ -360,7 +361,7 @@ footer {
     border: 0;
     border-radius: 3px;
     font-size: $small-font-size;
-    background-color: #d9f1f7;
+    background-color: $input;
 }
 
 .form__textarea {
@@ -369,7 +370,7 @@ footer {
     border: 0;
     border-radius: 5px;
     resize: none;
-    background-color: #d9f1f7;
+    background-color: $input;
 }
 
 .form__button {
@@ -377,12 +378,10 @@ footer {
     margin: 0 auto;
     margin-bottom: 30px;
     margin-top: 20px;
-}
-
-.copyright {
-    text-align: center;
-    color: $font-default;
-    font-size: $small-font-size;
+    padding: 5px 20px;
+    background: $input;
+    border: 0;
+    border-radius: 5px;
 }
 
 // Footer ends //

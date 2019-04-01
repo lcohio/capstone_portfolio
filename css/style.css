@@ -278,6 +278,7 @@ footer {
   background-size: cover;
   height: 500px;
   text-align: center;
+  margin-top: 4em;
 }
 @media screen and (min-width: 800px) {
   footer {
@@ -287,7 +288,6 @@ footer {
 
 .contact {
   text-align: center;
-  margin-top: 4em;
 }
 .contact__icon {
   padding-right: 5px;
@@ -338,12 +338,10 @@ footer {
   margin: 0 auto;
   margin-bottom: 30px;
   margin-top: 20px;
-}
-
-.copyright {
-  text-align: center;
-  color: #FFFFFF;
-  font-size: 0.8em;
+  padding: 5px 20px;
+  background: #d9f1f7;
+  border: 0;
+  border-radius: 5px;
 }
 
 #git {
@@ -383,6 +381,7 @@ footer {
   -webkit-clip-path: circle(0px at top right);
   clip-path: circle(0px at top right);
   transition: clip-path ease-in-out 700ms;
+  transition: -webkit-clip-path ease-in-out 700ms;
 }
 
 .topnav--open {
@@ -482,6 +481,11 @@ footer {
 .headline__container {
   text-align: center;
   padding: 1em 0;
+}
+
+html {
+  margin: 0;
+  padding: 0;
 }
 
 body {

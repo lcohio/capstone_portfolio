@@ -26,6 +26,7 @@
     -webkit-clip-path: circle(0px at top right);
     clip-path: circle(0px at top right);
     transition: clip-path ease-in-out 700ms;
+    transition: -webkit-clip-path ease-in-out 700ms;
 }
 
 .topnav--open {
