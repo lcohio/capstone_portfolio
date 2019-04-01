@@ -1,0 +1,127 @@
+//===============================================================================================
+// Nav Menus
+//===============================================================================================
+
+.container {
+    width: 95%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.logo {
+    float: left;
+    font-size: 1rem;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: $font-default;
+}
+
+.topnav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    text-align: center;
+    background: rgba(146, 183, 279, 0.7);
+    -webkit-clip-path: circle(0px at top right);
+    clip-path: circle(0px at top right);
+    transition: clip-path ease-in-out 700ms;
+}
+
+.topnav--open {
+    -webkit-clip-path: circle(250% at top right);
+    clip-path: circle(250% at top right);
+}
+
+.topnav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.topnav a {
+    color: $font-default;
+    display: block;
+    padding: 1em 2em 1em 1.5em;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.topnav a:hover,
+.topnav a:focus {
+  background: $background;
+  color: $black;
+}
+
+.menu-toggle {
+    padding: 1em;
+    position: absolute;
+    top: .75em;
+    right: .25em;
+    cursor: pointer;
+}
+  
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    display: block;
+    background: #EBEBD3;
+    height: 3px;
+    width: 1.75em;
+    border-radius: 3px;
+    transition: all ease-in-out 500ms;
+}
+
+.hamburger::before {
+  transform: translateY(-6px);
+}
+
+.hamburger::after {
+  transform: translateY(3px);
+}
+
+.open .hamburger {
+  transform: rotate(45deg);
+}
+
+.open .hamburger::before {
+  opacity: 0;
+}
+
+.open .hamburger::after {
+  transform: translateY(-3px) rotate(-90deg);
+}
+
+@media (min-width: 925px) {
+  
+  .menu-toggle {
+    display: none;
+  }
+  
+  .topnav {
+    height: auto;
+    position: relative;
+    background: transparent;
+    float: right;
+    clip-path: initial;
+    -webkit-clip-path: initial;
+  }
+  
+  .topnav li {
+    display: inline-block;
+    border: none;
+  }
+  
+  .topnav a {
+    padding: 0;
+    margin-left: 3em;
+  }
+  
+  .topnav a:hover,
+  .topnav a:focus {
+    background: transparent;
+  }
+  
+}
+

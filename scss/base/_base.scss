@@ -1,0 +1,21 @@
+//===============================================================================================
+// Base Styles
+//===============================================================================================
+
+body {
+    font-family: $font-stack;
+    margin: 0;
+    padding: 0;
+    background: $background;
+}
+
+header {
+    padding: 1.3em 0;
+    position: relative;
+}
+  
+header::after {
+    content: '';
+    clear: both;
+    display: block;
+}
