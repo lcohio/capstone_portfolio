@@ -310,9 +310,11 @@ span {
 footer {
     background: url('../images/footer.jpeg');
     background-size: cover;
-    background-attachment: fixed;
     height: 500px;
     text-align: center;
+    @media screen and (min-width: 800px) {
+        background-attachment: fixed;
+    }
 }
 
 .contact {
