@@ -140,11 +140,9 @@ span {
         padding: 0 15px 0 15px;
         @media screen and (min-width: 800px) {
             padding: 0 30px 0 30px;
-            opacity: 0.8;
             transition: all .25s ease-in-out;
             &:hover {
                 transform: scale(1.2);
-                opacity: 1;
             }
         }
     }
@@ -159,7 +157,10 @@ span {
     @media screen and (min-width: 700px) {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        margin: 0 auto;
         margin-top: 6em;
+        max-width: 1000px;
+
     }
 
     &__headline {
@@ -310,7 +311,7 @@ span {
 footer {
     background: url('../images/footer.jpeg');
     background-size: cover;
-    height: 500px;
+    height: 550px;
     text-align: center;
     margin-top: 4em;
     @media screen and (min-width: 800px) {
@@ -323,6 +324,21 @@ footer {
 
     &__headline {
         @extend %headline-style;
+    }
+
+    &__resume {
+        display: block;
+        margin: 0 auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding: 5px;
+        background-color: $input;
+        border-radius: 3px;
+        font-size: $small-font-size;
+        & a {
+            text-decoration: none;
+            color: initial;
+        }
     }
 
     &__icon {
@@ -369,6 +385,7 @@ footer {
     height: 90px;
     border: 0;
     border-radius: 5px;
+    font-size: $small-font-size;
     resize: none;
     background-color: $input;
 }

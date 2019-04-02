@@ -9,6 +9,8 @@
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
 </head>
 <body>
+
+    <!-- Navbar begins -->
     <header id="home">
         <div class="container">
             <h1 class="logo">Logan Coning | Web Developer</h1>
@@ -28,6 +30,7 @@
                   
         </div>
     </header>
+    <!-- Navbar ends, Showcase begins -->
 
     <section id="showcase">
         <div class="showcase">
@@ -37,7 +40,7 @@
                 <a href="https://www.twitter.com/logan_conan" target="_blank"><i class="fab fa-twitter fa-lg showcase__icon"></i></a>
                 <a href="https://github.com/lcohio" target="_blank"><i class="fab fa-github fa-lg showcase__icon"></i></a>
                 <a href="mailto:coninglogan@gmail.com" target="_top"><i class="fas fa-envelope-square fa-lg showcase__icon"></i></a>
-                <a href="#"><i class="fab fa-linkedin fa-lg showcase__icon"></i></a>
+                <a href="https://www.linkedin.com/in/logan-coning-3b046517a/" target="_blank"><i class="fab fa-linkedin fa-lg showcase__icon"></i></a>
             </div>
             
             <div class="center-con">
@@ -52,6 +55,7 @@
             </div>
         </div>
     </section>
+    <!-- Showcase ends, Skills begins-->
 
     <section id="skills">
         <div class="headline__container">
@@ -71,6 +75,7 @@
             </div>
         </div>
     </section>
+    <!-- Skills ends, Portfolio begins-->
     
     <section id="portfolio">
         <div class="headline__container">
@@ -99,6 +104,7 @@
             </div>
         </div>
     </section>
+    <!-- Portfolio ends, Resume begins -->
 
     <section id="resume">
         <div class="headline__container">
@@ -131,6 +137,7 @@
             </div>
         </div>
     </section>
+    <!-- Resume ends, Education begins -->
 
     <section id="education">
         <div class="headline__container">
@@ -140,11 +147,12 @@
             <div class="education__item">
                 <img class="education__image" src="./images/treehouse.png" alt="treehouse">
                 <p class="education__expound">I began my journey in web development in late 2018 with the assistance of the TechDegree from Treehouse. The value of this program is evidenced by
-                    their quality program content and the helpfulness of their staff.
+                    their quality program content, graded projects, and the helpfulness of their staff.
                 </p>
             </div>
         </div>
     </section>
+    <!-- Educations ends, About begins -->
 
     <section id="about">
         <div class="headline__container">
@@ -152,31 +160,38 @@
         </div>
         <div class="about">
             <img class="about__image" src="./images/portrait.jpg" alt="portrait"></img>
-            <p class="about__expound">I grew up in western Ohio and I've always had a fascination with computers and tech. I'm the guy that family members
+            <p class="about__expound">I grew up in western Ohio and I've had a fascination with computers and tech from a very young age. I'm the guy that family members
                 call about their broken technology. I wish I would've realized I could do this at a younger age when I had less experience in other industries.
             </p> 
-            <p class="about__expound">In my free time I enjoy playing guitars, fishing, and going flying (as in general aviation).
+            <p class="about__expound">When I'm not studying web development and writing code, I enjoy playing guitars, fishing, running and biking, and going flying (as in general aviation).
                 I earned my private pilot certificate 3 years ago.
+            </p>
+            <p class="about__expound">I am seeking employment with a company that values hard work, strong interpersonal relationships and communication, and creates
+                and maintains a culture and environment conducive to learning and unending skill improvement.
             </p>
         </div>
     </section>
+    <!-- About ends, Footer begins -->
 
     <footer>
         <div class="contact" id="contact">
             <h1 class="contact__headline">Get In Touch</h1>
+            <button class="contact__resume"><a href="./Resume.pdf">Download my Resume!</a></button>
             <p class="contact__phone"><i class="fas fa-phone contact__icon"></i>(937) 703-8005</p>
             <a href="mailto:coninglogan@gmail.com" target="_top" class="contact__email"><i class="fas fa-envelope contact__icon"></i>coninglogan@gmail.com</a>
             <form name="contact" method="POST" data-netlify="true">
                 <label for="name" class="form__label">Name:</label>
-                <input type="text" name="name" class="form__input">
+                <input type="text" name="name" class="form__input" required>
                 <label for="email" class="form__label">Email:</label>
-                <input type="email" name="email" class="form__input">
+                <input type="email" name="email" class="form__input" required>
                 <label for="message" class="form__label">Message:</label>
                 <textarea name="message" class="form__textarea"></textarea>
                 <button type="submit" class="form__button">Submit</button>
             </form>
         </div>
     </footer>
+    <!-- Footer ends -->
+    <!-- Add scripts -->
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script> 
     <script src="js/main.js"></script>
