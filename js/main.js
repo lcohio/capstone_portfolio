@@ -38,29 +38,25 @@ function scrollPageTo (to, duration=500) {
         if(currentTime < duration) {
             setTimeout(animateScroll, increment);
         } else {
-          resolve();
+            resolve();
         }
     };
     animateScroll();
   });
- }
+}
+
+// Iterate over Nav buttons, scroll page to respective positions depending on which link was clicked
+
+const linksNav = document.querySelectorAll('.nav__btn');
  
-const home = document.getElementsByClassName('nav__btn')[0];
-const portfolio = document.getElementsByClassName('nav__btn')[1];
-const contact = document.getElementsByClassName('nav__btn')[2];
- 
-
-home.addEventListener('click', (e) => {
-  e.preventDefault();
-  window.scrollPageTo(document.querySelector('.showcase'), 1000);
-});
-
-portfolio.addEventListener('click', (e) => {
-  e.preventDefault();
-  window.scrollPageTo(document.querySelector('.portfolio'), 1000);
-});
-
-contact.addEventListener('click', (e) => {
-  e.preventDefault();
-  window.scrollPageTo(document.querySelector('.contact'), 1000);
+linksNav.forEach(function(button) {
+  button.addEventListener('click', function() {
+    if(button.textContent === "Home") {
+      window.scrollPageTo(document.querySelector('.showcase'), 1000);
+    } else if(button.textContent === "Portfolio") {
+      window.scrollPageTo(document.querySelector('.portfolio'), 1000);
+    } else {
+      window.scrollPageTo(document.querySelector('.contact'), 1000);
+    }
+  });
 });

@@ -17,7 +17,7 @@
 }
 
 .showcase {
-  background: url("../images/macbook.jpeg");
+  background: url("../images/showcase.jpeg");
   background-size: cover;
   background-position: center center;
   height: 500px;
@@ -75,8 +75,8 @@
 }
 
 .typewriter {
-  animation: typewriter 4s steps(44) 1s 1 normal both, blinkTextCursor 500ms steps(44) infinite normal;
-  -webkit-animation: typewriter 4s steps(44) 1s 1 normal both, blinkTextCursor 500ms steps(44) infinite normal;
+  animation: typewriter 4s steps(44) 4s 1 normal both, blinkTextCursor 500ms steps(44) infinite normal;
+  -webkit-animation: typewriter 4s steps(44) 4s 1 normal both, blinkTextCursor 500ms steps(44) infinite normal;
 }
 
 @keyframes typewriter {
@@ -103,7 +103,7 @@
     padding: 3em 0;
   }
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 650px) {
   .skills__container {
     display: flex;
     flex-direction: row;
@@ -290,16 +290,17 @@ a[href^=tel] {
 
 .field {
   display: block;
-  width: 100%;
   margin: 0 auto;
+}
+@media screen and (min-width: 800px) {
+  .field {
+    width: 98%;
+  }
 }
 @media screen and (min-width: 800px) {
   .field__half {
     display: inline-block;
     width: 45%;
-  }
-  .field__half:first-child {
-    margin-right: 20px;
   }
 }
 

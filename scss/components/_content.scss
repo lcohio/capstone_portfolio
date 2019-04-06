@@ -5,7 +5,7 @@
 // Showcase Begins //
 
 .showcase {
-    background: url('../images/macbook.jpeg');
+    background: url('../images/showcase.jpeg');
     background-size: cover;
     background-position: center center;
     height: 500px;
@@ -62,9 +62,9 @@
 // Animate typewriter effect when page loads //
 
 .typewriter {
-    animation: typewriter 4s steps(44) 1s 1 normal both,
+    animation: typewriter 4s steps(44) 4s 1 normal both,
         blinkTextCursor 500ms steps(44) infinite normal;
-    -webkit-animation: typewriter 4s steps(44) 1s 1 normal both,
+    -webkit-animation: typewriter 4s steps(44) 4s 1 normal both,
         blinkTextCursor 500ms steps(44) infinite normal;
 }
 
@@ -94,7 +94,7 @@
 
     &__container {
         
-        @media screen and (min-width: 800px) {
+        @media screen and (min-width: 650px) {
             display: flex;
             flex-direction: row;
             justify-content: space-evenly;
@@ -328,15 +328,14 @@ a[href^="tel"] {
 
 .field {
     display: block;
-    width: 100%;
     margin: 0 auto;
+    @media screen and (min-width: 800px) {
+        width: 98%;
+    }
     &__half {
         @media screen and (min-width: 800px) {
             display: inline-block;
             width: 45%;
-            &:first-child {
-                margin-right: 20px;
-            }
         }
     }
 }
