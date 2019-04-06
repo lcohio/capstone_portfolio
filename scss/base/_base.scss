@@ -11,16 +11,27 @@ body {
     font-family: $font-stack;
     margin: 0;
     padding: 0;
-    background: $background;
+    background: $body-background;
 }
 
 header {
     padding: 1.3em 0;
     position: relative;
+    background-color: #576366;
 }
   
 header::after {
     content: '';
     clear: both;
     display: block;
+}
+
+figure {
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+form {
+    max-width: 1000px;
+    margin: 0 auto;
 }

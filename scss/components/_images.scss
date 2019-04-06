@@ -3,7 +3,18 @@
 //===============================================================================================
 
 #git {
-    padding-bottom: 32px;
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+
+#js {
+    width: 100px;
+    padding: 10px 0;
+}
+
+#sass {
+    padding-top: 8px;
+    padding-bottom: 7px;
 }
 
 @media screen and (min-width: 700px) {
@@ -14,4 +25,18 @@
 
 .education__image {
     width: 300px;
+    margin: 0 auto;
+    display: block;
+}
+
+.about__image {
+    width: 330px;
+    margin-top: 1em;
+    margin: 0 auto;
+    display: block;
+    
+}
+
+#gameshow {
+    height: 209px;
 }

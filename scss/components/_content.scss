@@ -5,27 +5,39 @@
 // Showcase Begins //
 
 .showcase {
-    background: url('../images/showcase-min.jpeg');
+    background: url('../images/macbook.jpeg');
     background-size: cover;
-    height: 600px;
+    background-position: center center;
+    height: 500px;
     text-align: center;
     @media screen and (min-width: 700px) {
         height: 800px;
     }
     
     &__headline {
-        margin: 0;
-        padding: 250px 10px 10px 0;
-        font-size: $large-font-size;
+        position: relative;
+        top: 30%;
+        width: 90%;
+        margin: 0 auto;
+        border-right: 2px solid rgba(255,255,255,.75);
+        white-space: nowrap;
+        overflow: hidden;
+        transform: translateY(-50%);
+        font-size: $med-font-size;
         font-weight: $font-weight-semibold;
         color: $font-default;
         @media screen and (min-width: 700px) {
-            font-size: 3em;
+            font-size: 2.8em;
+            top: 28%;
         }
     }
 
     &__social {
-        margin-top: 50px;
+        position: relative;
+        top: 410px;
+        @media screen and (min-width: 800px) {
+            top: 470px;
+        }
     }
 
     &__icon {
@@ -41,76 +53,23 @@
     }
 }
 
-.center-con {
-    display: flex;
-    height: 100px;
-    align-items: center;
-    justify-content: center;
+// Animate typewriter effect when page loads //
+
+.typewriter {
+    animation: typewriter 4s steps(44) 1s 1 normal both,
+        blinkTextCursor 500ms steps(44) infinite normal;
+    -webkit-animation: typewriter 4s steps(44) 1s 1 normal both,
+        blinkTextCursor 500ms steps(44) infinite normal;
 }
 
-.round {
-    position: relative;
-    width: 100px;
-    height: 100px;
-    border-radius: 100%;
-    cursor: pointer;
+@keyframes typewriter {
+    from{width: 0;}
+    to{width: 90%;}
 }
-
-span {
-    z-index: 999;
-    height: 3px;
-    margin:1px;
-    width: 30px;
-    background: $font-default;
-    transition: 0.4s ease;
-
-    &:first-child {
-        display: block;
-        position: absolute;
-        transform: rotate(45deg);
-        left: 25%;
-        bottom: 35%;
-    }
-
-    &:nth-child(2) {
-        display: block;
-        position: absolute;
-        transform: rotate(-45deg);
-        left: 45%;
-        bottom: 35%;
-    }
-
-    &:nth-child(3) {
-        display: block;
-        position: absolute;
-        transform: rotate(45deg);
-        left: 25%;
-        bottom: 54%;
-    }
-
-    &:nth-child(4) {
-        display: block;
-        position: absolute;
-        transform: rotate(-45deg);
-        left: 45%;
-        bottom: 54%;
-    }
-}
-
-.round:hover span:nth-child(1) {
-    transform: rotate(-135deg);
-}
-
-.round:hover span:nth-child(2) {
-    transform: rotate(135deg);
-}
-
-.round:hover span:nth-child(3) {
-    transform: rotate(225deg);
-}
-
-.round:hover span:nth-child(4) {
-    transform: rotate(-225deg);
+    
+@keyframes blinkTextCursor {
+    from{border-right-color: rgba(255,255,255,.75);}
+    to{border-right-color: transparent;}
 }
 
 // Showcase ends //
@@ -127,24 +86,23 @@ span {
         @extend %headline-style;
     }
 
-    &__row {
-        padding: 20px 0 20px 0;
+    &__container {
+        
         @media screen and (min-width: 800px) {
-            display: inline-block;
-            padding: 40px 0 40px 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            max-width: 950px;
+            margin: 0 auto;
         }
     }
 
     &__image {
         width: 120px;
-        padding: 0 15px 0 15px;
-        @media screen and (min-width: 800px) {
-            padding: 0 30px 0 30px;
-            transition: all .25s ease-in-out;
-            &:hover {
-                transform: scale(1.2);
-            }
-        }
+    }
+
+    &__label {
+        color: #375891;
     }
 }
 
@@ -173,12 +131,12 @@ span {
 
     &__image {
         width: 300px;
-        border: 2px solid gray;
-        border-radius: 5px;
+        border-radius: 2px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         transition: transform .25s ease-in-out;
         @media screen and (min-width: 700px) {
             &:hover {
-                transform: scale(1.1);
+                transform: scale(1.03);
             }
         }
     }
@@ -190,14 +148,14 @@ span {
 }
 
 .item__desc {
-    color: $font-default;
+    color: #375891;
     font-weight: $font-weight-regular;
     font-size: $med-font-size;
 }
 
 .item__expound {
     font-size: .8em;
-    color: $font-default;
+    color: #375891;
     width: 90%;
     margin: 0 auto;
     @media screen and (min-width: 700px) {
@@ -254,7 +212,7 @@ span {
 // Education begins //
 
 .education {
-    text-align: center;
+    text-align: left;
     margin-top: 2em;
 
     &__headline {
@@ -262,7 +220,7 @@ span {
     }
 
     &__expound {
-        color: $font-default;
+        color: $font-body;
         font-size: $base-font-size;
         line-height: $base-line-height;
         margin: 0 auto;
@@ -278,20 +236,15 @@ span {
 // About begins //
 
 .about {
-    text-align: center;
+    text-align: left;
     margin-top: 2em;
 
     &__headline {
         @extend %headline-style;
     }
 
-    &__image {
-        width: 330px;
-        margin-top: 1em;
-    }
-
     &__expound {
-        color: $font-default;
+        color: $font-body;
         font-size: $base-font-size;
         line-height: $base-line-height;
         margin-left: 5%;
@@ -320,25 +273,25 @@ footer {
 }
 
 .contact {
-    text-align: center;
 
     &__headline {
         @extend %headline-style;
+        color: $input;
+        border-bottom: 2px solid $input;
     }
 
     &__resume {
         display: block;
         margin: 0 auto;
+        width: 150px;
+        color: $font-body;
         margin-top: 10px;
         margin-bottom: 10px;
-        padding: 5px;
+        padding: 10px;
         background-color: $input;
         border-radius: 3px;
         font-size: $small-font-size;
-        & a {
-            text-decoration: none;
-            color: initial;
-        }
+        text-decoration: none;
     }
 
     &__icon {
@@ -362,32 +315,73 @@ footer {
     }
 }
 
-.form__label {
-    color: $font-default;
+.field {
     display: block;
-    text-align: center;
+    width: 100%;
     margin: 0 auto;
+    &__half {
+        @media screen and (min-width: 800px) {
+            display: inline-block;
+            width: 45%;
+            &:first-child {
+                margin-right: 20px;
+            }
+        }
+    }
+}
+
+.form {
+    &__label {
+        color: $font-default;
+        display: block;
+        text-align: left;
+        margin: 0 auto;
+        padding-bottom: 10px;
+        padding-left: 10%;
+        @media screen and (min-width: 800px) {
+            padding-left: 0;
+        }
+    }
+
+    &__input {
+        width: 80%;
+        height: 30px;
+        margin-bottom: 10px;
+        border: 0;
+        border-radius: 3px;
+        font-size: $small-font-size;
+        background-color: $input;
+        text-indent: 5px;
+        @media screen and (min-width: 800px) {
+            width: 100%;
+        }
+    }
+
+    &__textarea {
+        width: 80%;
+        height: 90px;
+        border: 0;
+        border-radius: 5px;
+        font-size: $small-font-size;
+        resize: none;
+        background-color: $input;
+        text-indent: 5px;
+        @media screen and (min-width: 800px) {
+            width: 92%;
+        }
+    }
+}
+
+.textarea__label {
+    text-align: left;
+    display: block;
+    margin-left: 10%;
     padding-bottom: 10px;
-}
-
-.form__input {
-    width: 250px;
-    height: 30px;
-    margin-bottom: 10px;
-    border: 0;
-    border-radius: 3px;
-    font-size: $small-font-size;
-    background-color: $input;
-}
-
-.form__textarea {
-    width: 250px;
-    height: 90px;
-    border: 0;
-    border-radius: 5px;
-    font-size: $small-font-size;
-    resize: none;
-    background-color: $input;
+    color: $font-default;
+    @media screen and (min-width: 800px) {
+        margin-left: 0;
+        padding-left: 4%;
+    }
 }
 
 .form__button {
@@ -399,6 +393,7 @@ footer {
     background: $input;
     border: 0;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 // Footer ends //

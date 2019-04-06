@@ -1,9 +1,9 @@
 //===============================================================================================
-// Nav Menus
+// Navbar
 //===============================================================================================
 
 .container {
-    width: 95%;
+    width: 85%;
     max-width: 1000px;
     margin: 0 auto;
 }
@@ -22,7 +22,7 @@
     top: 100%;
     right: 0;
     text-align: center;
-    background: rgba(146, 183, 279, 0.7);
+    background: rgb(146, 183, 279);
     -webkit-clip-path: circle(0px at top right);
     clip-path: circle(0px at top right);
     transition: clip-path ease-in-out 700ms;
@@ -40,18 +40,25 @@
     list-style: none;
 }
 
+.topnav li {
+    border-bottom: 1px solid lightgray;
+    &:last-child {
+      border: 0;
+    }
+}
+
 .topnav a {
-    color: $font-default;
+    color: $black;
     display: block;
     padding: 1em 2em 1em 1.5em;
     text-transform: uppercase;
     text-decoration: none;
-}
-
-.topnav a:hover,
-.topnav a:focus {
-  background: $background;
-  color: $black;
+    &:hover,
+    &:focus {
+    background: $background;
+    color: $font-default;
+    
+    }
 }
 
 .menu-toggle {
@@ -94,35 +101,46 @@
   transform: translateY(-3px) rotate(-90deg);
 }
 
-@media (min-width: 925px) {
+@media (min-width: 745px) {
   
-  .menu-toggle {
-    display: none;
-  }
+    .menu-toggle {
+      display: none;
+    }
   
-  .topnav {
-    height: auto;
-    position: relative;
-    background: transparent;
-    float: right;
-    clip-path: initial;
-    -webkit-clip-path: initial;
-  }
+    .topnav {
+      height: auto;
+      position: relative;
+      background: transparent;
+      float: right;
+      clip-path: initial;
+      -webkit-clip-path: initial;
+    }
   
-  .topnav li {
-    display: inline-block;
-    border: none;
-  }
+    .topnav li {
+      display: inline-block;
+      border: none;
+    }
   
-  .topnav a {
-    padding: 0;
-    margin-left: 3em;
-  }
-  
-  .topnav a:hover,
-  .topnav a:focus {
-    background: transparent;
-  }
-  
+    .topnav a {
+      padding: 0;
+      margin-left: 3em;
+      color: $font-default;
+      &:focus,
+      &:hover,
+      &:active {
+          padding-bottom: 3px;
+          background: transparent;
+          color: $black;
+          border-bottom: 3px solid $nav-border-active;
+      }
+    } 
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    height: 20px;
 }
 
