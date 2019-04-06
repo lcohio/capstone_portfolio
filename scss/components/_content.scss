@@ -46,9 +46,15 @@
         border: 1px solid $font-default;
         border-radius: 100%;
         cursor: pointer;
-        &:hover {
+        &:active {
             color: $icon-active;
-            background-color: white;
+            background-color: $font-default;
+        }
+        @media screen and (min-width: 700px) {
+            &:hover {
+                color: $icon-active;
+                background-color: $font-default;
+            }
         }
     }
 }
@@ -159,7 +165,7 @@
     width: 90%;
     margin: 0 auto;
     @media screen and (min-width: 700px) {
-        width: 340px;
+        width: 320px;
     }
 }
 
@@ -270,6 +276,11 @@ footer {
     @media screen and (min-width: 800px) {
         background-attachment: fixed;
     }
+}
+
+a[href^="tel"] {
+    color: inherit;
+    text-decoration: none;
 }
 
 .contact {
