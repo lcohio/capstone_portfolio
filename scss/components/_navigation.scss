@@ -55,8 +55,9 @@
     text-decoration: none;
     &:hover,
     &:focus {
-    background: $background;
     color: $font-default;
+    border-bottom: 3px solid red;
+    background-color: darken($color: $font-body, $amount: 0.2);
     
     }
 }
@@ -101,7 +102,7 @@
   transform: translateY(-3px) rotate(-90deg);
 }
 
-@media (min-width: 745px) {
+@media (min-width: 748px) {
   
     .menu-toggle {
       display: none;
@@ -128,8 +129,8 @@
       &:focus,
       &:hover,
       &:active {
-          padding-bottom: 3px;
           background: transparent;
+          padding-bottom: 3px;
           color: $black;
           border-bottom: 3px solid $nav-border-active;
       }

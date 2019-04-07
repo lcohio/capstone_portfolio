@@ -23,7 +23,7 @@ function scrollPageTo (to, duration=500) {
       to = document.querySelector(to) || reject();
     }
     if (typeof to !== 'number') {
-      to = to.getBoundingClientRect().top + element.scrollTop;
+      to = to.getBoundingClientRect().top - 180 + element.scrollTop;
     }
  
     let start = element.scrollTop,
@@ -50,13 +50,14 @@ function scrollPageTo (to, duration=500) {
 const linksNav = document.querySelectorAll('.nav__btn');
  
 linksNav.forEach(function(button) {
-  button.addEventListener('click', function() {
+  button.addEventListener('click', (e) => {
+    e.preventDefault();
     if(button.textContent === "Home") {
-      window.scrollPageTo(document.querySelector('.showcase'), 1000);
+      window.scrollPageTo(document.querySelector('.showcase'), 400);
     } else if(button.textContent === "Portfolio") {
-      window.scrollPageTo(document.querySelector('.portfolio'), 1000);
+      window.scrollPageTo(document.querySelector('.portfolio'), 400);
     } else {
-      window.scrollPageTo(document.querySelector('.contact'), 1000);
+      window.scrollPageTo(document.querySelector('.contact'), 400);
     }
   });
 });
