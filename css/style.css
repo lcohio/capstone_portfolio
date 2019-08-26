@@ -150,6 +150,10 @@
   color: #FFFFFF;
 }
 
+.image-stretch {
+  height: 209px;
+}
+
 .item__desc {
   color: #375891;
   font-weight: 400;
